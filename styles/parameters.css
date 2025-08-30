@@ -1,0 +1,45 @@
+/* 색상 및 테마 변수 */
+:root {
+    /* 메인 색상 */
+    --main-bg-color: #E4E3E3;
+    --primary-color: #fed136;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    
+    /* 배경 색상 */
+    --body-background: #1a1a1a;
+    --item-background: #2a2a2a;
+    
+    /* 그림자 */
+    --chakra-shadows-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --chakra-shadows-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --chakra-shadows-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    
+    /* 폰트 가중치 */
+    --chakra-fontWeights-normal: 400;
+    --chakra-fontWeights-medium: 500;
+    --chakra-fontWeights-semibold: 600;
+    --chakra-fontWeights-bold: 700;
+    
+    /* 트랜지션 */
+    --chakra-transition-property-common: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    --chakra-transition-duration-ultra-fast: 50ms;
+    --chakra-transition-duration-faster: 100ms;
+    --chakra-transition-duration-fast: 150ms;
+    --chakra-transition-duration-normal: 200ms;
+    --chakra-transition-duration-slow: 300ms;
+    --chakra-transition-duration-slower: 500ms;
+    --chakra-transition-duration-ultra-slow: 1000ms;
+    
+    /* 색상 팔레트 */
+    --chakra-colors-gray-50: #F7FAFC;
+    --chakra-colors-gray-100: #EDF2F7;
+    --chakra-colors-gray-200: #E2E8F0;
+    --chakra-colors-gray-300: #CBD5E0;
+    --chakra-colors-gray-400: #A0AEC0;
+    --chakra-colors-gray-500: #718096;
+    --chakra-colors-gray-600: #4A5568;
+    --chakra-colors-gray-700: #2D3748;
+    --chakra-colors-gray-800: #1A202C;
+    --chakra-colors-gray-900: #171923;
+}

@@ -1,0 +1,46 @@
+/* 폰트 정의 */
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 폰트 패밀리 변수 */
+:root {
+    --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-heading: 'GmarketSansMedium', 'Pretendard', sans-serif;
+}
+
+/* 폰트 클래스 */
+.Pretendard-ExtraLight {
+    font-family: 'Pretendard';
+    font-weight: 200;
+}
+
+.Pretendard-Light {
+    font-family: 'Pretendard';
+    font-weight: 300;
+}
+
+.Pretendard-Regular {
+    font-family: 'Pretendard';
+    font-weight: 400;
+}
+
+.Pretendard-Medium {
+    font-family: 'Pretendard';
+    font-weight: 500;
+}
+
+.Pretendard-semiBold {
+    font-family: 'Pretendard';
+    font-weight: 600;
+}
+
+.GmarketSansMedium {
+    font-family: 'GmarketSansMedium';
+    font-weight: normal;
+}

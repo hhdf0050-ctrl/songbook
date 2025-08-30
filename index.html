@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="누군가의 노래책">
+		<title>노래책</title>
+		<link href="styles/fonts.css" rel="stylesheet" type="text/css">
+		<link href="styles/parameters.css" rel="stylesheet" type="text/css">
+		<link href="styles/style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>    
+	</head>
+
+	<body>
+		<div class="base">
+			<!----------------------------------- 상단 헤더 -->
+			<div class="site-header">
+				<div class="header-content">
+					<span class="music-note">♪</span>
+					<h1 class="site-title">짱빵이의 노래책</h1>
+					<span class="music-note">♪</span>
+				</div>
+			</div>
+			
+			<!----------------------------------- 본문 -->
+			<div class="main-content" id="mainContent">
+			
+				<!----------------------------------- 랜덤 -->
+				<div class="random-list">
+					<!----------------------------------- 헤더 -->
+					<div class="header-gruop">
+						<div class="random-header-wrapper">
+							<h2 class="radom-list-header">
+								<formatted-string class="random-list-title">
+									랜덤 리스트
+								</formatted-string>
+							</h2>
+							<button type="button" class="random-refresh-button clickable" id="randomRefresh" onclick="refreshRandom();">
+								<i class="fa-solid fa-shuffle"></i>
+								<span>랜덤</span>
+							</button>
+						</div>
+					</div>
+					<!----------------------------------- 본문 -->
+					<div class="content-group">
+						<random class="random-music-list" id="RND">
+						</random>
+					</div>
+				</div>
+
+				<!----------------------------------- 모든 노래, 검색 결과 -->
+				<div class="main-list">
+					<!----------------------------------- 헤더 -->
+					<div class="header-gruop">
+						<div class="title-group">
+							<!----------------------------------- 헤더 텍스트 -->
+							<h2 class="main-list-header">
+								<formatted-string class="main-list-title">
+									모든 노래
+								</formatted-string>
+							</h2>
+							<!----------------------------------- 검색 영역 -->
+							<div class="search-box">
+								<div class="search-icon">
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</div>
+								<input type="text" id="inputsearch" onkeydown="searchEnter();" oninput="searchUpdate();" placeholder="Search" class="search-text">
+							</div>
+						</div>	
+
+						<!----------------------------------- 헤더 분류 선택자 -->
+						<div class="selector">
+							<!----------------------------------- 대분류 선택자 -->
+							
+							<category>
+							</category>
+							<!----------------------------------- 정렬 선택자 -->
+							<div class="sort-select">
+								<button type="button" class="sort-button clickable" id="bySinger" onclick="sortSinger();" >
+									<formatted-string class="sort-text">
+										가수명순
+										<i class="fa-solid fa-arrow-down-short-wide"></i>
+									</formatted-string>
+								</button>
+								<button type="button" class="sort-button clickable" id="bySong" onclick="sortSong();">
+									<formatted-string class="sort-text">
+										곡명순
+										<i class="fa-solid fa-arrow-down-short-wide"></i>
+									</formatted-string>
+								</button>
+								<button type="button" class="sort-button clickable button-selected" id="byAdd" onclick="sortAdded();">
+									<formatted-string class="sort-text">
+										등록순
+										<i class="fa-solid fa-arrow-down-short-wide"></i>
+									</formatted-string>
+								</button>
+							</div>
+						</div>
+						
+						<!----------------------------------- 헤더 분류 선택자 -->
+						<div class="selector">
+							
+							<!----------------------------------- 장르 목록 -->
+							<genre class="genre-list">
+							</genre>
+						</div>	
+					</div>
+					<!----------------------------------- End - 헤더 -->
+
+					<!----------------------------------- 노래 목록 -->
+					<section class="music-list" id="musicList">
+					</section>
+
+				</div>
+				<!----------------------------------- End - 모든 노래, 검색 결과 -->
+
+			</div>
+			<div id="toast"></div>
+
+
+
+
+
+
+			<script src="scripts/music-data.js"></script>
+			<script src="scripts/func.js"></script>
+		</div>
+	</body>
+</html> 
