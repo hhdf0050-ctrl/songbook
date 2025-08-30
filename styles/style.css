@@ -214,31 +214,33 @@ html {
 	background-color: var(--main-bg-color);
 	text-size-adjust: 100%;
 	/* --vh: 722px; */
-	-ms-overflow-style: auto;
+	-ms-overflow-style: none;
 	/* IE and Edge */
-	scrollbar-width: auto;
+	scrollbar-width: thin;
 	/* Firefox */
 	background-color: var(--body-background);
 }
 
 html::-webkit-scrollbar {
-	display: block;
 	width: 12px;
 	/* Chrome, Safari, Opera*/
 }
 
 html::-webkit-scrollbar-track {
-	background: #f1f1f1;
+	background: transparent;
 	border-radius: 6px;
 }
 
 html::-webkit-scrollbar-thumb {
-	background: #888;
+	background: rgba(136, 136, 136, 0.3);
 	border-radius: 6px;
+	border: 2px solid transparent;
+	background-clip: content-box;
 }
 
 html::-webkit-scrollbar-thumb:hover {
-	background: #555;
+	background: rgba(136, 136, 136, 0.6);
+	background-clip: content-box;
 }
 
 html,
@@ -258,6 +260,8 @@ html.darkmode {
 	width: 100%;
 	height: 100%;
 	overflow: auto;
+	scrollbar-width: thin;
+	scrollbar-color: rgba(136, 136, 136, 0.3) transparent;
 }
 
 @media screen and (max-width: 1020px) {
@@ -944,6 +948,72 @@ genre.genre-list {
 	.song-name {
 		margin-top: 0;
 		min-height: auto;
+	}
+	
+	/* 모바일에서 스크롤바 터치 가능하도록 설정 */
+	html::-webkit-scrollbar {
+		width: 40px;
+		display: block !important;
+	}
+	
+	html::-webkit-scrollbar-track {
+		background: transparent;
+		border-radius: 20px;
+	}
+	
+	html::-webkit-scrollbar-thumb {
+		background: rgba(136, 136, 136, 0.3);
+		border-radius: 20px;
+		border: 3px solid transparent;
+		min-height: 80px;
+		background-clip: content-box;
+	}
+	
+	html::-webkit-scrollbar-thumb:hover {
+		background: rgba(136, 136, 136, 0.5);
+		background-clip: content-box;
+	}
+	
+	html::-webkit-scrollbar-thumb:active {
+		background: #007AFF;
+		border: 3px solid rgba(255, 255, 255, 0.3);
+		background-clip: content-box;
+	}
+	
+	html::-webkit-scrollbar-thumb:focus {
+		background: #007AFF;
+		background-clip: content-box;
+	}
+	
+	/* 모바일에서 스크롤바 표시 및 터치 가능 */
+	html {
+		-ms-overflow-style: auto !important;
+		scrollbar-width: auto !important;
+	}
+	
+	.base {
+		scrollbar-width: auto !important;
+		scrollbar-color: rgba(136, 136, 136, 0.3) transparent;
+		overflow: auto !important;
+	}
+	
+	/* 모바일에서 스크롤바 강제 표시 */
+	* {
+		scrollbar-width: auto !important;
+		-ms-overflow-style: auto !important;
+	}
+	
+	/* 모바일에서 스크롤 중일 때 스크롤바 스타일 */
+	html:active::-webkit-scrollbar-thumb {
+		background: #007AFF !important;
+		background-clip: content-box;
+	}
+	
+	/* 모바일에서 스크롤바 드래그 중일 때 */
+	html::-webkit-scrollbar-thumb:active {
+		background: #007AFF !important;
+		box-shadow: 0 0 10px rgba(0, 122, 255, 0.5);
+		background-clip: content-box;
 	}
 }
 
