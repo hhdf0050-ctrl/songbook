@@ -923,6 +923,11 @@ genre.genre-list {
 	.cheeze-info {
 		margin-top: var(--chakra-space-1);
 	}
+	
+	/* 치즈값이 있는 노래에서만 가수명과 제목 간격 줄이기 */
+	.song-div:has(.cheeze-info) .artist-name {
+		margin-bottom: var(--chakra-space-0-5);
+	}
 }
 
 
