@@ -867,7 +867,8 @@ genre.genre-list {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
-		min-height: var(--chakra-sizes-24);
+		min-height: var(--chakra-sizes-32);
+		padding: var(--chakra-space-1);
 	}
 }
 
@@ -927,6 +928,22 @@ genre.genre-list {
 	/* 치즈값이 있는 노래에서만 가수명과 제목 간격 줄이기 */
 	.song-div:has(.cheeze-info) .artist-name {
 		margin-bottom: var(--chakra-space-0-5);
+	}
+	
+	/* 모바일에서 가수명이 가려지지 않도록 수정 */
+	.artist-name {
+		overflow: visible;
+		text-overflow: clip;
+		white-space: normal;
+		word-break: break-all;
+		line-height: 1.2;
+		margin-top: var(--chakra-space-0-5);
+	}
+	
+	/* 모바일에서 제목과 가수명을 위로 올리기 */
+	.song-name {
+		margin-top: 0;
+		min-height: auto;
 	}
 }
 
