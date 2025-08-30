@@ -919,6 +919,12 @@ genre.genre-list {
 	width: fit-content;
 }
 
+@media screen and (max-width: 1020px) {
+	.cheeze-info {
+		margin-top: var(--chakra-space-1);
+	}
+}
+
 
 
 /* mobile */
